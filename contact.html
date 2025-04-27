@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fayda SACCOs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+    <script>
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+
+
+
+    <main class="container my-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+            </ol>
+        </nav>
+
+        <h1 class="mb-4">Contact Fayda SACCOs</h1>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h2 class="mb-4"><i class="fas fa-envelope me-2 text-primary"></i>Send Us a Message</h2>
+                        <form id="contactForm" action="contact.php" method="POST">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select class="form-select" id="subject" name="subject" required>
+                                    <option value="" selected disabled>Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="account">Account Inquiry</option>
+                                    <option value="loan">Loan Inquiry</option>
+                                    <option value="complaint">Complaint</option>
+                                    <option value="feedback">Feedback</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h2 class="mb-4"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Our Offices</h2>
+
+                        <div class="mb-4">
+                            <h5>Head Office</h5>
+                            <address>
+                                <strong>Fayda SACCOs</strong><br>
+                                Mebrat Hail, Minch Gebeya Building, 2<sup>nd </sup>Floor, Office 202<br>
+                                Adama, Ethiopia<br>
+                                <i class="fas fa-phone me-1"></i> +251 703 636 311<br>
+                                <i class="fas fa-phone me-1"></i> +251 703 957 679<br>
+                                <i class="fas fa-envelope me-1"></i> FaydaSACCO@gmail.com
+                            </address>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5>Branch Offices</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <strong>Adama Branch</strong><br>
+                                    Mebrat Hail, Minch Gebeya Building, 2 <sup>nd </sup> Floor<br>
+                                    <i class="fas fa-phone me-1"></i> +251 995 565 625 <br>
+                                    <i class="fas fa-phone me-1"></i> +251 995 565 669 <br>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="mb-3">
+                            <h5>Opening Hours</h5>
+                            <ul class="list-unstyled">
+                                <li><strong><i class="fas fa-clock me-1"></i>Monday - Friday:</strong> 8:00AM - 5:00PM</li>
+                                <li><strong><i class="fas fa-clock me-1"></i>Saturday:</strong> 8:00AM - 12:00PM</li>
+                                <li><strong><i class="fas fa-clock me-1"></i>Sunday:</strong> Closed</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="branch-info mt-4">
+            <h3>Branch Location</h3>
+            <p>Adama Branch - Adama Mebrat Hail Area, Minch Gebeya Building 2<sup>nd </sup> Floor </p>
+        </div>
+        
+        <div class="card shadow-sm mt-4">
+            <div class="card-body p-0">
+                <div class="ratio ratio-16x9">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.923237790027!2d38.75731431478633!3d8.980980993545785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85f3a1e4f7c5%3A0x6a1e5b5b5b5b5b5b!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Required Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Main Script -->
+    <script>
+        // Load header and footer
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load header
+            fetch('includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+
+            // Load footer
+            fetch('includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+
+                    // Initialize footer functionalities
+                    initializeFooter();
+
+                    // Initialize loan calculator if it exists on this page
+                    if (document.getElementById('loanCalculator')) {
+                        initializeLoanCalculator();
+                    }
+                });
+
+            // Other page-specific initializations
+            initializePage();
+        });
+
+        function initializeFooter() {
+            // Set current year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Back to top button
+            const backToTopButton = document.querySelector('.btn-back-to-top');
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.style.display = 'block';
+                    } else {
+                        backToTopButton.style.display = 'none';
+                    }
+                });
+
+                backToTopButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Newsletter form
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const email = document.getElementById('newsletterEmail').value;
+
+                    // Here you would typically send the email to your server
+                    console.log('Subscribed email:', email);
+
+                    // Show success message
+                    alert('Thank you for subscribing to our newsletter!');
+                    this.reset();
+                });
+            }
+
+            // Visitor counter
+            function updateVisitorCount() {
+                // In a real implementation, you would fetch this from your analytics
+                const totalVisitors = Math.floor(1000 + Math.random() * 5000);
+                const activeVisitors = Math.floor(1 + Math.random() * 50);
+
+                const visitorCount = document.getElementById('visitor-count');
+                const activeVisitorsElement = document.getElementById('active-visitors');
+
+                if (visitorCount) visitorCount.textContent = totalVisitors.toLocaleString();
+                if (activeVisitorsElement) activeVisitorsElement.textContent = activeVisitors;
+            }
+
+            updateVisitorCount();
+            setInterval(updateVisitorCount, 30000);
+
+            // Cookie Consent
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const customizeCookies = document.getElementById('customizeCookies');
+            const saveCookieSettings = document.getElementById('saveCookieSettings');
+            const acceptCookiesFromModal = document.getElementById('acceptCookiesFromModal');
+
+            // Check if cookie consent was already given
+            if (cookieConsent && !localStorage.getItem('cookieConsent')) {
+                setTimeout(() => {
+                    cookieConsent.style.display = 'block';
+                }, 2000);
+            }
+
+            // Cookie functions
+            function acceptAllCookies() {
+                localStorage.setItem('cookieConsent', 'all');
+                if (cookieConsent) cookieConsent.style.display = 'none';
+                console.log('All cookies accepted');
+            }
+
+            function saveCustomPreferences() {
+                const analytics = document.getElementById('analyticsCookies').checked;
+                const marketing = document.getElementById('marketingCookies').checked;
+
+                localStorage.setItem('cookieConsent', 'custom');
+                localStorage.setItem('analyticsCookies', analytics);
+                localStorage.setItem('marketingCookies', marketing);
+
+                console.log('Cookie preferences saved:', { analytics, marketing });
+
+                if (cookieConsent) cookieConsent.style.display = 'none';
+                bootstrap.Modal.getInstance(document.getElementById('cookieSettingsModal')).hide();
+            }
+
+            // Event listeners
+            if (acceptCookies) acceptCookies.addEventListener('click', acceptAllCookies);
+            if (acceptCookiesFromModal) acceptCookiesFromModal.addEventListener('click', acceptAllCookies);
+            if (customizeCookies) customizeCookies.addEventListener('click', () => {
+                bootstrap.Modal.getOrCreateInstance(document.getElementById('cookieSettingsModal')).show();
+            });
+            if (saveCookieSettings) saveCookieSettings.addEventListener('click', saveCustomPreferences);
+        }
+
+        function initializeLoanCalculator() {
+            // Your loan calculator initialization code here
+            document.getElementById('loanCalculator').addEventListener('submit', function (e) {
+                e.preventDefault();
+                calculateLoan();
+            });
+
+            function calculateLoan() {
+                // ... existing loan calculator code ...
+            }
+
+            // ... other loan calculator functions ...
+        }
+
+        function initializePage() {
+            // Other page-specific initializations
+            // Floating header effect
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('navbar-scrolled');
+                    } else {
+                        navbar.classList.remove('navbar-scrolled');
+                    }
+                });
+            }
+
+            // Update datetime
+            function updateDateTime() {
+                const now = new Date();
+                const options = {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: true
+                };
+                const datetimeElement = document.getElementById('datetime');
+                if (datetimeElement) {
+                    datetimeElement.textContent = now.toLocaleDateString('en-US', options);
+                }
+            }
+
+            updateDateTime();
+            setInterval(updateDateTime, 60000);
+        }
+    </script>
+    </body>
+    
+    </html>

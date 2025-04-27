@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Center - Fayda SACCOs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+    <!-- Header Container -->
+    <div id="header-container"></div>
+    <script>
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+
+    <!-- Main content -->
+    <main class="container my-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Media</li>
+            </ol>
+        </nav>
+
+        <!-- Media Hero Section -->
+        <h1 class="mb-4">Media Center</h1>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="mb-5">
+            <h2 class="mb-4"><i class="fas fa-quote-left text-primary me-2"></i>Member Testimonials</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="testimonial-item">
+                                <div class="mb-3">
+                                    <img src="images/testimonial1.jpg" alt="Member" class="rounded-circle" width="80"
+                                        height="80">
+                                    <h5 class="mt-2">Alemayehu Tekle</h5>
+                                    <small class="text-muted">Member since 2017</small>
+                                </div>
+                                <p>"Fayda SACCOs helped me expand my small business with affordable loans. The
+                                    application process was simple and the staff very supportive."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="testimonial-item">
+                                <div class="mb-3">
+                                    <img src="images/testimonial2.jpg" alt="Member" class="rounded-circle" width="80"
+                                        height="80">
+                                    <h5 class="mt-2">Meron Abebe</h5>
+                                    <small class="text-muted">Member since 2019</small>
+                                </div>
+                                <p>"The financial literacy training transformed how I manage my finances. I've doubled
+                                    my savings in just one year!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <div class="testimonial-item">
+                                <div class="mb-3">
+                                    <img src="images/testimonial3.jpg" alt="Member" class="rounded-circle" width="80"
+                                        height="80">
+                                    <h5 class="mt-2">Tewodros Kassahun</h5>
+                                    <small class="text-muted">Member since 2015</small>
+                                </div>
+                                <p>"Thanks to Fayda's housing loan, my family now has a comfortable home. Their flexible
+                                    repayment options made it possible."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery -->
+<section id="gallery" class="mb-5">
+    <h2 class="mb-4"><i class="fas fa-images text-primary me-2"></i>Photo Gallery</h2>
+
+    <!-- Discussion to Establish SACCOs -->
+    <div class="gallery-event mb-5">
+        <h3 class="mb-3">Discussion to Establish SACCOs</h3>
+        <p class="mb-4">On Sunday, October 13, 2024, the first discussion to establish Saving and Credit Co-Operative
+            Society (SACCOs) in Adama Town. The event was attended by various stakeholders, including government
+            officials and community leaders. The discussion focused on the benefits of SACCOs in promoting savings and
+            providing affordable credit to members. Participants expressed their enthusiasm for the initiative and
+            committed to supporting its establishment.</p>
+
+        <div class="row g-3" class="col-6 col-md-3">
+                <a href="#" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                    data-event="discussion" data-index="0">
+                    <img src="images/gallery1-thumb.jpg" alt="First Discussion to Establish SACCOs" 
+                        class="img-fluid rounded shadow-sm gallery-thumb" width="20px " height="20px"
+                    class="gallery-caption">First Discussion to Establish SACCOs
+                </a>
+        </div>
+    </div>
+
+    <!-- Training Session -->
+    <div class="gallery-event mb-5">
+        <h3 class="mb-3">Training Session</h3>
+        <p class="mb-4">The comprehensive training session held on November 5, 2024, provided SACCO members with
+            essential financial management skills. The two-day workshop covered topics including bookkeeping, loan
+            management, and cooperative principles. Over 50 participants gained practical knowledge to effectively
+            manage their finances and contribute to the SACCO's success.</p>
+
+        <div class="row g-3">
+            <div class="col-6 col-md-3">
+                <a href="#" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                    data-event="training" data-index="0">
+                    <img src="images/training1-thumb.jpg" alt="Trainer explaining concepts"
+                        class="img-fluid rounded shadow-sm gallery-thumb"width="20px " height="20px" class="gallery-caption">Trainer session
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="#" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                    data-event="training" data-index="1">
+                    <img src="images/training1-thumb.jpg" alt="Participants working in groups"
+                        class="img-fluid rounded shadow-sm gallery-thumb" width="20px " height="20px" class="gallery-caption">Group work
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="#" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                    data-event="training" data-index="2">
+                    <img src="images/training1-thumb.jpg" alt="Certificate distribution"
+                        class="img-fluid rounded shadow-sm gallery-thumb" width="20px " height="20px" class="gallery-caption">Certificates
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="#" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                    data-event="training" data-index="3">
+                    <img src="images/training1-thumb.jpg" alt="Closing ceremony"
+                        class="img-fluid rounded shadow-sm gallery-thumb" width="20px " height="20px" class="gallery-caption">Closing
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Branch Opening -->
+    <div class="gallery-event mb-5">
+        <h3 class="mb-3">Branch Opening</h3>
+        <p class="mb-4">The grand opening of our new branch office on December 15, 2024, marked a significant milestone
+            for Fayda SACCOs. The ceremony was attended by local dignitaries, members, and community representatives.
+            The new branch will improve access to our services and support the growing membership in the region.</p>
+
+        <div class="row g-3">
+            <div class="col-6 col-md-3">
+                <a href="#" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                    data-event="branch" data-index="0">
+                    <img src="images/branch1-thumb.jpg" alt="Ribbon cutting ceremony"
+                        class="img-fluid rounded shadow-sm gallery-thumb" width="20px " height="20px" class="gallery-caption"  >Ribbon cutting
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="#" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                    data-event="branch" data-index="1">
+                    <img src="images/branch1-thumb.jpg" alt="Interior of new branch"
+                        class="img-fluid rounded shadow-sm gallery-thumb" width="20px " height="20px" class="gallery-caption"  >Branch interior
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="#" class="gallery-item" data-bs-toggle="modal" data-bs-target="#galleryModal"
+                    data-event="branch" data-index="2">
+                    <img src="images/branch1-thumb.jpg" alt="Staff at new branch"
+                        class="img-fluid rounded shadow-sm gallery-thumb" width="20px " height="20px" class="gallery-caption  ">  Branch staff
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="galleryModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img src="" class="img-fluid modal-image" alt="">
+                <div class="image-description mt-3"></div>
+                <div class="d-flex justify-content-between mt-4">
+                    <button class="btn btn-primary prev-btn"><i class="fas fa-chevron-left"></i> Previous</button>
+                    <span class="image-counter"></span>
+                    <button class="btn btn-primary next-btn">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Gallery data for each event
+    const galleryData = {
+        discussion: {
+            title: "Discussion to Establish SACCOs",
+            images: [
+                { src: "images/gallery1.jpg", alt: "Discussion to Establish SACCOs" },
+                { src: "images/gallery2.jpg"},
+                { src: "images/gallery3.jpg"},
+                { src: "images/gallery4.jpg"},
+                { src: "images/gallery5.jpg"},
+                { src: "images/gallery6.jpg"},
+                { src: "images/gallery7.jpg"},
+                { src: "images/gallery8.jpg"},
+                { src: "images/gallery9.jpg"},
+                { src: "images/gallery10.jpg"}
+            ]
+        },
+        training: {
+            title: "Training Session",
+            images: [
+                { src: "images/training1.jpg", alt: "Trainer explaining concepts", desc: "Lead trainer explaining financial management principles" },
+                { src: "images/training2.jpg", alt: "Participants working in groups", desc: "Members practicing bookkeeping techniques in small groups" },
+                { src: "images/training3.jpg", alt: "Certificate distribution", desc: "Certificate award ceremony for training participants" },
+                { src: "images/training4.jpg", alt: "Closing ceremony", desc: "Closing remarks by the training coordinator" }
+            ]
+        },
+        branch: {
+            title: "Branch Opening",
+            images: [
+                { src: "images/branch1.jpg", alt: "Ribbon cutting ceremony", desc: "Official ribbon cutting by the town mayor" },
+                { src: "images/branch2.jpg", alt: "Interior of new branch", desc: "Modern interior of the new branch office" },
+                { src: "images/branch3.jpg", alt: "Staff at new branch", desc: "Dedicated staff members ready to serve customers" }
+            ]
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const galleryModal = document.getElementById('galleryModal');
+        const modal = new bootstrap.Modal(galleryModal);
+        const modalTitle = galleryModal.querySelector('.modal-title');
+        const modalImage = galleryModal.querySelector('.modal-image');
+        const imageDesc = galleryModal.querySelector('.image-description');
+        const prevBtn = galleryModal.querySelector('.prev-btn');
+        const nextBtn = galleryModal.querySelector('.next-btn');
+        const imageCounter = galleryModal.querySelector('.image-counter');
+
+        let currentEvent = '';
+        let currentIndex = 0;
+
+        // Handle gallery item clicks
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                currentEvent = this.getAttribute('data-event');
+                currentIndex = parseInt(this.getAttribute('data-index'));
+                updateModal();
+            });
+        });
+
+        // Navigation buttons
+        prevBtn.addEventListener('click', function () {
+            currentIndex = (currentIndex - 1 + galleryData[currentEvent].images.length) % galleryData[currentEvent].images.length;
+            updateModal();
+        });
+
+        nextBtn.addEventListener('click', function () {
+            currentIndex = (currentIndex + 1) % galleryData[currentEvent].images.length;
+            updateModal();
+        });
+
+        // Keyboard navigation
+        galleryModal.addEventListener('keydown', function (e) {
+            if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + galleryData[currentEvent].images.length) % galleryData[currentEvent].images.length;
+                updateModal();
+            } else if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % galleryData[currentEvent].images.length;
+                updateModal();
+            }
+        });
+
+        function updateModal() {
+            const eventData = galleryData[currentEvent];
+            const imageData = eventData.images[currentIndex];
+
+            modalTitle.textContent = eventData.title;
+            modalImage.src = imageData.src;
+            modalImage.alt = imageData.alt;
+            imageDesc.textContent = imageData.desc;
+            imageCounter.textContent = `${currentIndex + 1} of ${eventData.images.length}`;
+        }
+    });
+</script>
+
+        <!-- Videos -->
+        <section id="videos" class="mb-5">
+            <h2 class="mb-4"><i class="fas fa-video text-primary me-2"></i>Videos</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/example1" title="About Fayda SACCOs"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <h4 class="mt-2">About Fayda SACCOs</h4>
+                    <p>Learn more about our mission, vision, and values</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/example2" title="Financial Literacy Workshop"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <h4 class="mt-2">Financial Literacy Workshop</h4>
+                    <p>Highlights from our recent financial education event</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- News & Press Releases -->
+        <section id="news" class="mb-5">
+            <h2 class="mb-4"><i class="fas fa-newspaper text-primary me-2"></i>News & Press Releases</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="images/news1-thumb.jpg" class="card-img-sm" alt="Fayda SACCO started Operation" height="25px" width="30px" h5 class="card-title"><b>  Fayda SACCOs started Operation</b>  </h5>
+                            <p class="card-text">We are proud to announce that Fayda SACCOs has been started operetion Since January 1, 2025 G.C</p>
+                            <a href="news-detail.html?id=1" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">Posted on October 15, 2023</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="images/news1-thumb.jpg" class="card-img-sm" alt="New Mobile App Launch" height="25px" width="30px" h5 class="card-title"><b>   New Mobile App Launch  </b></h5>
+                            <p class="card-text">Our new mobile banking app is now available with enhanced features for
+                                easier account management.</p>
+                            <a href="news-detail.html?id=2" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">Posted on August 5, 2023</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <img src="images/news1-thumb.jpg" class="card-img-sm" alt="Annual General Meeting 2023" height="25px" width="30px" h5 class="card-title"><b>  Annual General Meeting 2023</b>  </h5>
+                            <p class="card-text">Join us for our upcoming AGM where we'll review the year's achievements
+                                and plans.</p>
+                            <a href="news-detail.html?id=3" class="btn btn-sm btn-outline-primary">Read More</a>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <small class="text-muted">Posted on June 20, 2023</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="galleryModalLabel">Photo Gallery</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="" id="modalImage" class="img-fluid" alt="Gallery Image" loading="lazy">
+                    <p id="modalCaption" class="mt-3 fw-bold"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+    <script>
+        fetch('includes/footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load footer');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading footer:', error);
+                document.getElementById('footer-container').innerHTML = ``;
+            });
+    </script>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/visitor-counter.js"></script>
+    <script>
+        // Enhanced gallery modal with error handling
+        document.addEventListener('DOMContentLoaded', function () {
+            // Gallery Modal functionality
+            const galleryModal = document.getElementById('galleryModal');
+            if (galleryModal) {
+                galleryModal.addEventListener('show.bs.modal', function (event) {
+                    const button = event.relatedTarget;
+                    if (!button) return;
+
+                    const imgSrc = button.getAttribute('data-bs-img');
+                    const caption = button.getAttribute('data-bs-caption') || '';
+
+                    const modalImage = document.getElementById('modalImage');
+                    const modalCaption = document.getElementById('modalCaption');
+
+                    if (modalImage) {
+                        modalImage.src = imgSrc;
+                        modalImage.alt = caption || 'Gallery Image';
+                    }
+                    if (modalCaption) modalCaption.textContent = caption;
+                });
+            }
+
+            // Error handling for images
+            document.querySelectorAll('img').forEach(img => {
+                img.addEventListener('error', function () {
+                    this.src = 'images/placeholder.jpg';
+                    this.alt = 'Image not available';
+                });
+            });
+
+            // Cookie consent
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptCookies = document.getElementById('acceptCookies');
+
+            if (!localStorage.getItem('cookiesAccepted') && cookieConsent) {
+                cookieConsent.style.display = 'block';
+            }
+
+            if (acceptCookies) {
+                acceptCookies.addEventListener('click', function () {
+                    localStorage.setItem('cookiesAccepted', 'true');
+                    if (cookieConsent) cookieConsent.style.display = 'none';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

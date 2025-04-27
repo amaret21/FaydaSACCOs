@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fayda SACCOs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+    <script>
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+
+
+    <main class="container my-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">FAQs</li>
+            </ol>
+        </nav>
+
+        <h1 class="mb-4">Frequently Asked Questions</h1>
+
+        <!-- Search Box -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search FAQs..." id="faqSearch">
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Categories -->
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="mb-0"><i class="fas fa-users me-2"></i>Membership</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="accordion" id="membershipAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="membershipHeading1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#membershipCollapse1" aria-expanded="true"
+                                        aria-controls="membershipCollapse1">
+                                        How do I become a member?
+                                    </button>
+                                </h3>
+                                <div id="membershipCollapse1" class="accordion-collapse collapse show"
+                                    aria-labelledby="membershipHeading1" data-bs-parent="#membershipAccordion">
+                                    <div class="accordion-body">
+                                        <p>To become a member of Fayda SACCO:</p>
+                                        <ol>
+                                            <li>Complete the membership application form (available online or at any
+                                                branch)</li>
+                                            <li>Provide copies of your ID document</li>
+                                            <li>Pay the membership fee of 200 ETB</li>
+                                            <li>Make your initial deposit (minimum 100 ETB)</li>
+                                        </ol>
+                                        <p>Your membership will be activated within 24 hours of completing these steps.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More membership FAQs -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card shadow-sm h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="mb-0"><i class="fas fa-piggy-bank me-2"></i>Savings</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="accordion" id="savingsAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header" id="savingsHeading1">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#savingsCollapse1" aria-expanded="false"
+                                        aria-controls="savingsCollapse1">
+                                        What types of savings accounts do you offer?
+                                    </button>
+                                </h3>
+                                <div id="savingsCollapse1" class="accordion-collapse collapse"
+                                    aria-labelledby="savingsHeading1" data-bs-parent="#savingsAccordion">
+                                    <div class="accordion-body">
+                                        <p>We offer several savings products:</p>
+                                        <ul>
+                                            <li><strong>Regular Savings:</strong> Minimum 100 ETB, withdraw anytime,
+                                                earns 5% interest</li>
+                                            <li><strong>Fixed Deposit:</strong> Minimum 5,000 ETB, fixed terms (3-24
+                                                months), higher interest</li>
+                                            <li><strong>Target Savings:</strong> Save towards specific goals with
+                                                flexible contributions</li>
+                                            <li><strong>Youth Savings:</strong> Special account for members under 25
+                                                years</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- More savings FAQs -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More FAQ categories -->
+        </div>
+
+        <!-- Submit Question -->
+        <section class="mt-5">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h2 class="mb-4">Still Have Questions?</h2>
+                    <p class="lead">If you didn't find the answer to your question, please submit it below and we'll get
+                        back to you within 24 hours.</p>
+
+                    <form id="faqForm" action="faq.php" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="faqName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="faqName" name="name" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="faqEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="faqEmail" name="email" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="faqQuestion" class="form-label">Your Question</label>
+                            <textarea class="form-control" id="faqQuestion" name="question" rows="4"
+                                required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Submit Question</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Required Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Main Script -->
+    <script>
+        // Load header and footer
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load header
+            fetch('includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+
+            // Load footer
+            fetch('includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+
+                    // Initialize footer functionalities
+                    initializeFooter();
+
+                    // Initialize loan calculator if it exists on this page
+                    if (document.getElementById('loanCalculator')) {
+                        initializeLoanCalculator();
+                    }
+                });
+
+            // Other page-specific initializations
+            initializePage();
+        });
+
+        function initializeFooter() {
+            // Set current year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Back to top button
+            const backToTopButton = document.querySelector('.btn-back-to-top');
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.style.display = 'block';
+                    } else {
+                        backToTopButton.style.display = 'none';
+                    }
+                });
+
+                backToTopButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Newsletter form
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const email = document.getElementById('newsletterEmail').value;
+
+                    // Here you would typically send the email to your server
+                    console.log('Subscribed email:', email);
+
+                    // Show success message
+                    alert('Thank you for subscribing to our newsletter!');
+                    this.reset();
+                });
+            }
+
+            // Visitor counter
+            function updateVisitorCount() {
+                // In a real implementation, you would fetch this from your analytics
+                const totalVisitors = Math.floor(1000 + Math.random() * 5000);
+                const activeVisitors = Math.floor(1 + Math.random() * 50);
+
+                const visitorCount = document.getElementById('visitor-count');
+                const activeVisitorsElement = document.getElementById('active-visitors');
+
+                if (visitorCount) visitorCount.textContent = totalVisitors.toLocaleString();
+                if (activeVisitorsElement) activeVisitorsElement.textContent = activeVisitors;
+            }
+
+            updateVisitorCount();
+            setInterval(updateVisitorCount, 30000);
+
+            // Cookie Consent
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const customizeCookies = document.getElementById('customizeCookies');
+            const saveCookieSettings = document.getElementById('saveCookieSettings');
+            const acceptCookiesFromModal = document.getElementById('acceptCookiesFromModal');
+
+            // Check if cookie consent was already given
+            if (cookieConsent && !localStorage.getItem('cookieConsent')) {
+                setTimeout(() => {
+                    cookieConsent.style.display = 'block';
+                }, 2000);
+            }
+
+            // Cookie functions
+            function acceptAllCookies() {
+                localStorage.setItem('cookieConsent', 'all');
+                if (cookieConsent) cookieConsent.style.display = 'none';
+                console.log('All cookies accepted');
+            }
+
+            function saveCustomPreferences() {
+                const analytics = document.getElementById('analyticsCookies').checked;
+                const marketing = document.getElementById('marketingCookies').checked;
+
+                localStorage.setItem('cookieConsent', 'custom');
+                localStorage.setItem('analyticsCookies', analytics);
+                localStorage.setItem('marketingCookies', marketing);
+
+                console.log('Cookie preferences saved:', { analytics, marketing });
+
+                if (cookieConsent) cookieConsent.style.display = 'none';
+                bootstrap.Modal.getInstance(document.getElementById('cookieSettingsModal')).hide();
+            }
+
+            // Event listeners
+            if (acceptCookies) acceptCookies.addEventListener('click', acceptAllCookies);
+            if (acceptCookiesFromModal) acceptCookiesFromModal.addEventListener('click', acceptAllCookies);
+            if (customizeCookies) customizeCookies.addEventListener('click', () => {
+                bootstrap.Modal.getOrCreateInstance(document.getElementById('cookieSettingsModal')).show();
+            });
+            if (saveCookieSettings) saveCookieSettings.addEventListener('click', saveCustomPreferences);
+        }
+
+        function initializeLoanCalculator() {
+            // Your loan calculator initialization code here
+            document.getElementById('loanCalculator').addEventListener('submit', function (e) {
+                e.preventDefault();
+                calculateLoan();
+            });
+
+            function calculateLoan() {
+                // ... existing loan calculator code ...
+            }
+
+            // ... other loan calculator functions ...
+        }
+
+        function initializePage() {
+            // Other page-specific initializations
+            // Floating header effect
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('navbar-scrolled');
+                    } else {
+                        navbar.classList.remove('navbar-scrolled');
+                    }
+                });
+            }
+
+            // Update datetime
+            function updateDateTime() {
+                const now = new Date();
+                const options = {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: true
+                };
+                const datetimeElement = document.getElementById('datetime');
+                if (datetimeElement) {
+                    datetimeElement.textContent = now.toLocaleDateString('en-US', options);
+                }
+            }
+
+            updateDateTime();
+            setInterval(updateDateTime, 60000);
+        }
+    </script>
+    </body>
+    
+    </html>

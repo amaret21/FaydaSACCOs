@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Registration - Fayda SACCO</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+    <script>
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+
+    <main class="container my-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Register</li>
+            </ol>
+        </nav>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="mb-0">Member Registration Form</h2>
+                    </div>
+                    <div class="card-body p-4">
+                        <?php if (isset($_GET['error'])): ?>
+                        <div class="alert alert-danger">
+                            <?php echo htmlspecialchars($_GET['error']); ?>
+                        </div>
+                        <?php endif; ?>
+                        <?php if (isset($_GET['success'])): ?>
+                        <div class="alert alert-success">
+                            <?php echo htmlspecialchars($_GET['success']); ?>
+                        </div>
+                        <?php endif; ?>
+
+                        <form id="registrationForm" action="register.php" method="POST" enctype="multipart/form-data">
+                            <h4 class="mb-3">Personal Information</h4>
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="firstName" class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                    <div class="invalid-feedback">Please enter your first name</div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="middleName" class="form-label">Middle Name</label>
+                                    <input type="text" class="form-control" id="middleName" name="middleName">
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="lastName" class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                    <div class="invalid-feedback">Please enter your last name</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="dob" class="form-label">Date of Birth *</label>
+                                    <input type="date" class="form-control" id="dob" name="dob" required>
+                                    <div class="invalid-feedback">You must be at least 18 years old</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="gender" class="form-label">Gender *</label>
+                                    <select class="form-select" id="gender" name="gender" required>
+                                        <option value="" selected disabled>Select Gender</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select your gender</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="maritalStatus" class="form-label">Marital Status *</label>
+                                    <select class="form-select" id="maritalStatus" name="maritalStatus" required>
+                                        <option value="" selected disabled>Select Marital Status</option>
+                                        <option value="single">Single</option>
+                                        <option value="married">Married</option>
+                                        <option value="divorced">Divorced</option>
+                                        <option value="widowed">Widowed</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select your marital status</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="nationality" class="form-label">Nationality *</label>
+                                    <select class="form-select" id="nationality" name="nationality" required>
+                                        <option value="" selected disabled>Select Nationality</option>
+                                        <option value="Ethiopia">Ethiopia</option>
+                                        <option value="Kenya">Kenya</option>
+                                        <option value="Somali">Somali</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select your nationality</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="idType" class="form-label">ID Type *</label>
+                                    <select class="form-select" id="idType" name="idType" required>
+                                        <option value="" selected disabled>Select ID Type</option>
+                                        <option value="national">National ID</option>
+                                        <option value="passport">Passport</option>
+                                        <option value="driving">Driving License</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select your ID type</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="idNumber" class="form-label">ID Number *</label>
+                                    <input type="text" class="form-control" id="idNumber" name="idNumber" required>
+                                    <div class="invalid-feedback">Please enter your ID number</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="tin" class="form-label">TIN (Tax Identification Number)</label>
+                                    <input type="text" class="form-control" id="tin" name="tin">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="occupation" class="form-label">Occupation *</label>
+                                    <input type="text" class="form-control" id="occupation" name="occupation" required>
+                                    <div class="invalid-feedback">Please enter your occupation</div>
+                                </div>
+                            </div>
+
+                            <h4 class="mb-3 mt-4">Contact Information</h4>
+                            <div class="row">
+                                <div class="col-md-3 mb-3">
+                                    <label for="city" class="form-label">City *</label>
+                                    <input type="text" class="form-control" id="city" name="city" required>
+                                    <div class="invalid-feedback">Please enter your city</div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="subCity" class="form-label">Sub-City/Zone *</label>
+                                    <input type="text" class="form-control" id="subCity" name="subCity" required>
+                                    <div class="invalid-feedback">Please enter your sub-city/zone</div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="kebele" class="form-label">Kebele *</label>
+                                    <input type="text" class="form-control" id="kebele" name="kebele" required>
+                                    <div class="invalid-feedback">Please enter your kebele</div>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="wereda" class="form-label">Wereda *</label>
+                                    <input type="text" class="form-control" id="wereda" name="wereda" required>
+                                    <div class="invalid-feedback">Please enter your wereda</div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="houseNo" class="form-label">House Number *</label>
+                                    <input type="text" class="form-control" id="houseNo" name="houseNo" required>
+                                    <div class="invalid-feedback">Please enter your house number</div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="mobilePhone" class="form-label">Mobile Phone *</label>
+                                    <input type="tel" class="form-control" id="mobilePhone" name="mobilePhone" required>
+                                    <div class="invalid-feedback">Please enter a valid phone number</div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber">
+                                </div>
+                            </div>
+
+                            <h4 class="mb-3 mt-4">Account Information</h4>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <div class="invalid-feedback">Please enter a valid email address</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="username" class="form-label">Username (Auto-generated)</label>
+                                    <input type="text" class="form-control" id="username" name="username" readonly>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="password" class="form-label">Password *</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                    <div class="invalid-feedback">Password must be at least 8 characters</div>
+                                    <div class="form-text">At least 8 characters</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="confirmPassword" class="form-label">Confirm Password *</label>
+                                    <input type="password" class="form-control" id="confirmPassword"
+                                        name="confirmPassword" required>
+                                    <div class="invalid-feedback">Passwords must match</div>
+                                </div>
+                            </div>
+
+                            <h4 class="mb-3 mt-4">Share Subscription</h4>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="shareCount" class="form-label">Number of Shares *</label>
+                                    <input type="number" class="form-control" id="shareCount" name="shareCount" min="1"
+                                        value="1" required>
+                                    <div class="invalid-feedback">Please enter number of shares</div>
+                                    <div class="form-text">Minimum 1 share (100 ETB per share)</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="finalPaymentDate" class="form-label">Final Payment Date *</label>
+                                    <input type="date" class="form-control" id="finalPaymentDate"
+                                        name="finalPaymentDate" required>
+                                    <div class="invalid-feedback">Please select final payment date</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="idPhoto" class="form-label">Upload ID Photo *</label>
+                                <input type="file" class="form-control" id="idPhoto" name="idPhoto" accept="image/*"
+                                    required>
+                                <div class="invalid-feedback">Please upload a photo of your ID</div>
+                            </div>
+
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="terms" name="terms" required>
+                                    <label class="form-check-label" for="terms">
+                                        I agree to the <a href="#" data-bs-toggle="modal"
+                                            data-bs-target="#termsModal">Terms and Conditions</a> *
+                                    </label>
+                                    <div class="invalid-feedback">You must accept the terms and conditions</div>
+                                </div>
+                            </div>
+
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary btn-lg">Register</button>
+                                <a href="login.html" class="btn btn-outline-secondary">Already have an account?
+                                    Login</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Terms Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Membership Requirements</h6>
+                    <p>To become a member of Fayda SACCO, you must:</p>
+                    <ul>
+                        <li>Be at least 18 years old</li>
+                        <li>Provide valid identification documents</li>
+                        <li>Pay the required membership fee of 200 ETB</li>
+                        <li>Agree to abide by the SACCO's bylaws</li>
+                    </ul>
+
+                    <h6 class="mt-4">Member Responsibilities</h6>
+                    <p>As a member, you agree to:</p>
+                    <ul>
+                        <li>Maintain regular savings as required</li>
+                        <li>Repay loans according to the agreed terms</li>
+                        <li>Attend general meetings when possible</li>
+                        <li>Keep your account information up to date</li>
+                    </ul>
+
+                    <h6 class="mt-4">Data Protection</h6>
+                    <p>We are committed to protecting your personal information in accordance with applicable data
+                        protection laws.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Required Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Main Script -->
+    <script>
+        // Load header and footer
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load header
+            fetch('includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+
+            // Load footer
+            fetch('includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+
+                    // Initialize footer functionalities
+                    initializeFooter();
+
+                    // Initialize loan calculator if it exists on this page
+                    if (document.getElementById('loanCalculator')) {
+                        initializeLoanCalculator();
+                    }
+                });
+
+            // Other page-specific initializations
+            initializePage();
+        });
+
+        function initializeFooter() {
+            // Set current year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Back to top button
+            const backToTopButton = document.querySelector('.btn-back-to-top');
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.style.display = 'block';
+                    } else {
+                        backToTopButton.style.display = 'none';
+                    }
+                });
+
+                backToTopButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Newsletter form
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const email = document.getElementById('newsletterEmail').value;
+
+                    // Here you would typically send the email to your server
+                    console.log('Subscribed email:', email);
+
+                    // Show success message
+                    alert('Thank you for subscribing to our newsletter!');
+                    this.reset();
+                });
+            }
+
+            // Visitor counter
+            function updateVisitorCount() {
+                // In a real implementation, you would fetch this from your analytics
+                const totalVisitors = Math.floor(1000 + Math.random() * 5000);
+                const activeVisitors = Math.floor(1 + Math.random() * 50);
+
+                const visitorCount = document.getElementById('visitor-count');
+                const activeVisitorsElement = document.getElementById('active-visitors');
+
+                if (visitorCount) visitorCount.textContent = totalVisitors.toLocaleString();
+                if (activeVisitorsElement) activeVisitorsElement.textContent = activeVisitors;
+            }
+
+            updateVisitorCount();
+            setInterval(updateVisitorCount, 30000);
+
+            // Cookie Consent
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const customizeCookies = document.getElementById('customizeCookies');
+            const saveCookieSettings = document.getElementById('saveCookieSettings');
+            const acceptCookiesFromModal = document.getElementById('acceptCookiesFromModal');
+
+            // Check if cookie consent was already given
+            if (cookieConsent && !localStorage.getItem('cookieConsent')) {
+                setTimeout(() => {
+                    cookieConsent.style.display = 'block';
+                }, 2000);
+            }
+
+            // Cookie functions
+            function acceptAllCookies() {
+                localStorage.setItem('cookieConsent', 'all');
+                if (cookieConsent) cookieConsent.style.display = 'none';
+                console.log('All cookies accepted');
+            }
+
+            function saveCustomPreferences() {
+                const analytics = document.getElementById('analyticsCookies').checked;
+                const marketing = document.getElementById('marketingCookies').checked;
+
+                localStorage.setItem('cookieConsent', 'custom');
+                localStorage.setItem('analyticsCookies', analytics);
+                localStorage.setItem('marketingCookies', marketing);
+
+                console.log('Cookie preferences saved:', { analytics, marketing });
+
+                if (cookieConsent) cookieConsent.style.display = 'none';
+                bootstrap.Modal.getInstance(document.getElementById('cookieSettingsModal')).hide();
+            }
+
+            // Event listeners
+            if (acceptCookies) acceptCookies.addEventListener('click', acceptAllCookies);
+            if (acceptCookiesFromModal) acceptCookiesFromModal.addEventListener('click', acceptAllCookies);
+            if (customizeCookies) customizeCookies.addEventListener('click', () => {
+                bootstrap.Modal.getOrCreateInstance(document.getElementById('cookieSettingsModal')).show();
+            });
+            if (saveCookieSettings) saveCookieSettings.addEventListener('click', saveCustomPreferences);
+        }
+
+        function initializeLoanCalculator() {
+            // Your loan calculator initialization code here
+            document.getElementById('loanCalculator').addEventListener('submit', function (e) {
+                e.preventDefault();
+                calculateLoan();
+            });
+
+            function calculateLoan() {
+                // ... existing loan calculator code ...
+            }
+
+            // ... other loan calculator functions ...
+        }
+
+        function initializePage() {
+            // Other page-specific initializations
+            // Floating header effect
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('navbar-scrolled');
+                    } else {
+                        navbar.classList.remove('navbar-scrolled');
+                    }
+                });
+            }
+
+            // Update datetime
+            function updateDateTime() {
+                const now = new Date();
+                const options = {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: true
+                };
+                const datetimeElement = document.getElementById('datetime');
+                if (datetimeElement) {
+                    datetimeElement.textContent = now.toLocaleDateString('en-US', options);
+                }
+            }
+
+            updateDateTime();
+            setInterval(updateDateTime, 60000);
+        }
+    </script>
+    </body>
+    
+    </html>

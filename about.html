@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Fayda SACCOs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+
+<body>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+    <script>
+        fetch('includes/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+
+    <!-- Main content -->
+    <main class="container my-5">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About Us</li>
+            </ol>
+        </nav>
+
+        <!-- About Hero Section -->
+        <section class="about-hero mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold mb-3">About Fayda SACCOs</h1>
+                    <p class="lead">Fayda SACCOs, a member-owned financial cooperative since October 31, 2024, offers innovative services, savings, loans,
+                    and investments for community financial inclusion and development through member empowerment.</p>
+                    <a href="register.html" class="btn btn-center btn-lg mt-3">Become a Member</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/about-hero.jpg" alt="Fayda SACCOs Team" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section id="mission" class="mission-vision mb-5 py-4 bg-light rounded-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-bullseye fa-2x text-center me-3"></i>
+                            <h2 class="mb-0">Our Mission</h2>
+                        </div>
+                        <p>Improve socio-economic conditions of members & other people through mobilizing saving and
+                            creating access to finance
+                            using modern technology and highly motivated staffs.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-eye fa-2x text-center me-3"></i>
+                            <h2 class="mb-0">Our Vision</h2>
+                        </div>
+                        <p>To be a preferred Saving and Credit Cooperative Association by 2030 in Ethiopia, recognized
+                            for excellence in member service, financial sustainability, and community development.</p>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <div class="p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-bullseye fa-2x text-center me-3"></i>
+                            <h2 class="mb-0">Objective</h2>
+                        </div>
+                        <p>Build a saving culture and facilitate credit with a fair interest rates and improve the
+                            socio-economic conditions of members and other people by equipping them with
+                            entrepreneurship and business development skills. And ultimately contribute to the poverty
+                            reduction effort of the country by creating employment opportunities especially for women
+                            and youth.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="core-values mb-5">
+            <h2 class="text-center mb-4">Our Core Values</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card value-card h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-hands-helping fa-3x mb-3 text-center"></i>
+                            <h5>Cooperation</h5>
+                            <p>We believe in working together for mutual benefit and shared success.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card value-card h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-shield-alt fa-3x mb-3 text-center"></i>
+                            <h5>Integrity</h5>
+                            <p>We conduct our business with honesty, transparency, and ethical practices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card value-card h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-users fa-3x mb-3 text-center"></i>
+                            <h5>Member Focus</h5>
+                            <p>Our members are at the center of everything we do.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card value-card h-100 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-lightbulb fa-3x mb-3 text-center"></i>
+                            <h5>Innovation</h5>
+                            <p>We continuously improve our services to better serve our members.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- History Timeline -->
+        <section id="history" class="history-timeline mb-5">
+            <h2 class="text-center mb-4">Our History</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Thursday, 31 Oct 2024</div>
+                    <div class="timeline-content">
+                        <h5>Establishment</h5>
+                        <p>Fayda SACCO was founded by a group of 100 visionary individuals with the goal of creating a
+                            member-owned financial cooperative.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <h5>First Branch Opened</h5>
+                        <p>Opened our first branch office in Adama, expanding access to our services.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2015</div>
+                    <div class="timeline-content">
+                        <h5>1,000 Members</h5>
+                        <p>Reached our first major milestone of 1,000 active members.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2018</div>
+                    <div class="timeline-content">
+                        <h5>Mobile Banking</h5>
+                        <p>Launched our mobile banking platform to better serve our members.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-content">
+                        <h5>10,000+ Members</h5>
+                        <p>Currently serving over 10,000 members with a wide range of financial services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Board of Directors -->
+        <section id="team" class="board-members mb-5">
+            <h2 class="text-center mb-4">Board of Directors</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card team-card h-100 shadow-sm">
+                        <img src="images/team1.jpg" class="card-img-top" alt="Board Member">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Ato Dagnachew Lemma</h5>
+                            <p class="card-text text-muted">Chairperson</p>
+                            <p class="card-text">With over 13 years of experience in banking and community development.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card team-card h-100 shadow-sm">
+                        <img src="images/team2.jpg" class="card-img-top" alt="Board Member">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Ato Amare Tafa</h5>
+                            <p class="card-text text-muted">Vice Chairperson</p>
+                            <p class="card-text">More than 16 years in banking expertise in risk management and
+                                financial strategy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card team-card h-100 shadow-sm">
+                        <img src="images/team3.jpg" class="card-img-top" alt="Board Member">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Woy Betselot Tesema</h5>
+                            <p class="card-text text-muted">Board Secretary</p>
+                            <p class="card-text">BA Degree in IT with 14 years of experience in own Business.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card team-card h-100 shadow-sm">
+                        <img src="images/team4.jpg" class="card-img-top" alt="Board Member">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Ato Workneh Jima</h5>
+                            <p class="card-text text-muted">Accountant</p>
+                            <p class="card-text">Master’s Degree in Business Administration with 19 in a various companies.</p>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-md-4">
+                        <div class="card team-card h-100 shadow-sm">
+                            <img src="images/team5.jpg" class="card-img-top" alt="Board Member">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">W/ro Tuba Abdishu</h5>
+                                <p class="card-text text-muted">Cashier</p>
+                                <p class="card-text">MBA Degree in Business Management with 20 in a various companies.</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#team" class="btn btn-outline-center">View All Board Members</a>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section id="partners" class="partners mb-5">
+            <h2 class="text-center mb-4">Our Partners</h2>
+            <div class="row g-4 align-items-center justify-content-center">
+                <div class="col-6 col-md-3">
+                    <img src="images/partner1.png" alt="Partner Logo" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="images/partner2.png" alt="Partner Logo" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="images/partner3.png" alt="Partner Logo" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="images/partner4.png" alt="Partner Logo" class="img-fluid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Benefits -->
+        <section class="membership-benefits mb-5 bg-center text-white p-4 rounded-3">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="mb-3">Why Join Fayda SACCO?</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Competitive interest rates on savings
+                        </li>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Affordable loan products</li>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Annual dividends on your shares</li>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Financial education programs</li>
+                        <li class="mb-2"><i class="fas fa-check-circle me-2"></i> Voting rights in SACCO decisions</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="images/membership.png" alt="Membership Benefits" class="img-fluid"
+                        style="max-height: 300px;">
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="register.html" class="btn btn-light btn-lg">Join Us Today</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Required Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Main Script -->
+    <script>
+        // Load header and footer
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load header
+            fetch('includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+
+            // Load footer
+            fetch('includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-placeholder').innerHTML = data;
+
+                    // Initialize footer functionalities
+                    initializeFooter();
+
+                    // Initialize loan calculator if it exists on this page
+                    if (document.getElementById('loanCalculator')) {
+                        initializeLoanCalculator();
+                    }
+                });
+
+            // Other page-specific initializations
+            initializePage();
+        });
+
+        function initializeFooter() {
+            // Set current year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Back to top button
+            const backToTopButton = document.querySelector('.btn-back-to-top');
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.style.display = 'block';
+                    } else {
+                        backToTopButton.style.display = 'none';
+                    }
+                });
+
+                backToTopButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Newsletter form
+            const newsletterForm = document.getElementById('newsletterForm');
+            if (newsletterForm) {
+                newsletterForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const email = document.getElementById('newsletterEmail').value;
+
+                    // Here you would typically send the email to your server
+                    console.log('Subscribed email:', email);
+
+                    // Show success message
+                    alert('Thank you for subscribing to our newsletter!');
+                    this.reset();
+                });
+            }
+
+            // Visitor counter
+            function updateVisitorCount() {
+                // In a real implementation, you would fetch this from your analytics
+                const totalVisitors = Math.floor(1000 + Math.random() * 5000);
+                const activeVisitors = Math.floor(1 + Math.random() * 50);
+
+                const visitorCount = document.getElementById('visitor-count');
+                const activeVisitorsElement = document.getElementById('active-visitors');
+
+                if (visitorCount) visitorCount.textContent = totalVisitors.toLocaleString();
+                if (activeVisitorsElement) activeVisitorsElement.textContent = activeVisitors;
+            }
+
+            updateVisitorCount();
+            setInterval(updateVisitorCount, 30000);
+
+            // Cookie Consent
+            const cookieConsent = document.getElementById('cookieConsent');
+            const acceptCookies = document.getElementById('acceptCookies');
+            const customizeCookies = document.getElementById('customizeCookies');
+            const saveCookieSettings = document.getElementById('saveCookieSettings');
+            const acceptCookiesFromModal = document.getElementById('acceptCookiesFromModal');
+
+            // Check if cookie consent was already given
+            if (cookieConsent && !localStorage.getItem('cookieConsent')) {
+                setTimeout(() => {
+                    cookieConsent.style.display = 'block';
+                }, 2000);
+            }
+
+            // Cookie functions
+            function acceptAllCookies() {
+                localStorage.setItem('cookieConsent', 'all');
+                if (cookieConsent) cookieConsent.style.display = 'none';
+                console.log('All cookies accepted');
+            }
+
+            function saveCustomPreferences() {
+                const analytics = document.getElementById('analyticsCookies').checked;
+                const marketing = document.getElementById('marketingCookies').checked;
+
+                localStorage.setItem('cookieConsent', 'custom');
+                localStorage.setItem('analyticsCookies', analytics);
+                localStorage.setItem('marketingCookies', marketing);
+
+                console.log('Cookie preferences saved:', { analytics, marketing });
+
+                if (cookieConsent) cookieConsent.style.display = 'none';
+                bootstrap.Modal.getInstance(document.getElementById('cookieSettingsModal')).hide();
+            }
+
+            // Event listeners
+            if (acceptCookies) acceptCookies.addEventListener('click', acceptAllCookies);
+            if (acceptCookiesFromModal) acceptCookiesFromModal.addEventListener('click', acceptAllCookies);
+            if (customizeCookies) customizeCookies.addEventListener('click', () => {
+                bootstrap.Modal.getOrCreateInstance(document.getElementById('cookieSettingsModal')).show();
+            });
+            if (saveCookieSettings) saveCookieSettings.addEventListener('click', saveCustomPreferences);
+        }
+
+        function initializeLoanCalculator() {
+            // Your loan calculator initialization code here
+            document.getElementById('loanCalculator').addEventListener('submit', function (e) {
+                e.preventDefault();
+                calculateLoan();
+            });
+
+            function calculateLoan() {
+                // ... existing loan calculator code ...
+            }
+
+            // ... other loan calculator functions ...
+        }
+
+        function initializePage() {
+            // Other page-specific initializations
+            // Floating header effect
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('navbar-scrolled');
+                    } else {
+                        navbar.classList.remove('navbar-scrolled');
+                    }
+                });
+            }
+
+            // Update datetime
+            function updateDateTime() {
+                const now = new Date();
+                const options = {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: true
+                };
+                const datetimeElement = document.getElementById('datetime');
+                if (datetimeElement) {
+                    datetimeElement.textContent = now.toLocaleDateString('en-US', options);
+                }
+            }
+
+            updateDateTime();
+            setInterval(updateDateTime, 60000);
+        }
+    </script>
+    </body>
+    
+    </html>
