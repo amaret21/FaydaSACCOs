@@ -89,34 +89,75 @@
                     </div>
                 </div>
             </section>
-            <!-- Stats Section -->
-            <section class="stats-section mb-5 py-4 bg-light rounded-3">
+            
+            <!-- Facts of Fayda SACCOs -->
+            <section class="stats-section mb-5 py-5 bg-gradient bg-light rounded-4 shadow">
                 <div class="container">
-                    <div class="row text-center">
-                        <div class="col-md-4">
-                            <div class="stat-item p-3">
+                    <h2 class="text-center mb-4 fw-bold text-success display-5">Facts of Fayda SACCOs</h2>
+                    <div class="row text-center g-4">
+                        <div class="col-md-4 col-lg-2">
+                            <div class="stat-item p-3 bg-white rounded-3 shadow-sm h-100">
                                 <i class="fas fa-code-branch fa-3x text-success mb-3"></i>
-                                <h2 class="count" data-target="25">1</h2>
-                                <p class="lead">Branches</p>
+                                <h2 class="count text-dark fw-bold" data-target="1">0</h2>
+                                <p class="lead text-muted">Branches</p>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="stat-item p-3">
+                        <div class="col-md-4 col-lg-2">
+                            <div class="stat-item p-3 bg-white rounded-3 shadow-sm h-100">
                                 <i class="fas fa-users fa-3x text-success mb-3"></i>
-                                <h2 class="count" data-target="120">17</h2>
-                                <p class="lead">Employees</p>
+                                <h2 class="count text-dark fw-bold" data-target="20">0</h2>
+                                <p class="lead text-muted">Employees</p>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="stat-item p-3">
+                        <div class="col-md-4 col-lg-2">
+                            <div class="stat-item p-3 bg-white rounded-3 shadow-sm h-100">
                                 <i class="fas fa-user-friends fa-3x text-success mb-3"></i>
-                                <h2 class="count" data-target="8500">+230</h2>
-                                <p class="lead">Total Members</p>
+                                <h2 class="count text-dark fw-bold" data-target="230">+0</h2>
+                                <p class="lead text-muted">Members</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="stat-item p-3 bg-white rounded-3 shadow-sm h-100">
+                                <i class="fas fa-hand-holding-usd fa-3x text-success mb-3"></i>
+                                <h2 class="count text-dark fw-bold" data-target="500000">+0</h2>
+                                <p class="lead text-muted">Loan Disbursed (ETB)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="stat-item p-3 bg-white rounded-3 shadow-sm h-100">
+                                <i class="fas fa-piggy-bank fa-3x text-success mb-3"></i>
+                                <h2 class="count text-dark fw-bold" data-target="2484000">+0</h2>
+                                <p class="lead text-muted">Members' Savings (ETB)</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            
+            <!-- CountUp Script -->
+            <script>
+                const counters = document.querySelectorAll('.count');
+                const speed = 200; // speed of counting
+
+                counters.forEach(counter => {
+                    const animate = () => {
+                        const target = +counter.getAttribute('data-target');
+                        const count = +counter.innerText.replace(/\D/g, ''); // remove non-numbers
+                        const increment = target / speed;
+
+                        if (count < target) {
+                            counter.innerText = '+' + Math.ceil(count + increment).toLocaleString();
+                            setTimeout(animate, 10);
+                        } else {
+                            counter.innerText = '+' + target.toLocaleString();
+                        }
+                    };
+                    animate();
+                });
+            </script>
+
+
+            
             <!-- Scripts -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
@@ -273,7 +314,7 @@
                                 <button class="nav-link" id="schedule-tab" data-bs-toggle="tab"
                                     data-bs-target="#schedule-tab-pane" type="button" role="tab">Payment
                                     Schedule</button>
-                            </li>
+                            </li>                          
                         </ul>
                         <div class="tab-content p-3 border border-top-0 rounded-bottom">
                             <div class="tab-pane fade show active" id="chart-tab-pane" role="tabpanel">
@@ -448,12 +489,11 @@
                                 <img src="images/news1.jpg" class="card-img-sm" alt="News" height="27px" width="40px" h5
                                     class="card-title"><b> Annual General Meeting 2025</b> </h5>
                                 <p class="card-text">Join us for our AGM on December 15th at our main office. All
-                                    members
-                                    are encouraged to attend.</p>
+                                    members are encouraged to attend.</p>
                                 <a href="#" class="btn btn-sm btn-outline-success">Read More</a>
                             </div>
                             <div class="card-footer bg-transparent">
-                                <small class="text-muted">Posted on November 10, 2023</small>
+                                <small class="text-muted">Posted on January 10, 2025</small>
                             </div>
                         </div>
                     </div>
@@ -462,13 +502,13 @@
                             <div class="card-body">
                                 <img src="images/news1.jpg" class="card-img-sm" alt="News" height="27px" width="40px" h5
                                     class="card-title"> <b> New Mobile Banking App</b></h5>
-                                <p class="card-text">Our new mobile app makes banking easier than ever. Download it
-                                    today
-                                    from Google Play or App Store.</p>
+                                    <p class="card-text">Our new mobile app makes Services easier than ever. <b> Coming Soon...</b> .</p>
+                                <!-- <p class="card-text">Our new mobile app makes Services easier than ever. Download it
+                                    today from Google Play or App Store.</p> -->
                                 <a href="#" class="btn btn-sm btn-outline-success">Read More</a>
                             </div>
                             <div class="card-footer bg-transparent">
-                                <small class="text-muted">Posted on October 25, 2023</small>
+                                <small class="text-muted">Posted on March 25, 2025</small>
                             </div>
                         </div>
                     </div>
@@ -482,7 +522,7 @@
                                 <a href="#" class="btn btn-sm btn-outline-success">Read More</a>
                             </div>
                             <div class="card-footer bg-transparent">
-                                <small class="text-muted">Posted on October 15, 2023</small>
+                                <small class="text-muted">Posted on March 25, 2025</small>
                             </div>
                         </div>
                     </div>
@@ -561,38 +601,6 @@
                     });
                 }
 
-                // Newsletter form
-                const newsletterForm = document.getElementById('newsletterForm');
-                if (newsletterForm) {
-                    newsletterForm.addEventListener('submit', function (e) {
-                        e.preventDefault();
-                        const email = document.getElementById('newsletterEmail').value;
-
-                        // Here you would typically send the email to your server
-                        console.log('Subscribed email:', email);
-
-                        // Show success message
-                        alert('Thank you for subscribing to our newsletter!');
-                        this.reset();
-                    });
-                }
-
-                // Visitor counter
-                function updateVisitorCount() {
-                    // In a real implementation, you would fetch this from your analytics
-                    const totalVisitors = Math.floor(1000 + Math.random() * 5000);
-                    const activeVisitors = Math.floor(1 + Math.random() * 50);
-
-                    const visitorCount = document.getElementById('visitor-count');
-                    const activeVisitorsElement = document.getElementById('active-visitors');
-
-                    if (visitorCount) visitorCount.textContent = totalVisitors.toLocaleString();
-                    if (activeVisitorsElement) activeVisitorsElement.textContent = activeVisitors;
-                }
-
-                updateVisitorCount();
-                setInterval(updateVisitorCount, 30000);
-
                 // Cookie Consent
                 const cookieConsent = document.getElementById('cookieConsent');
                 const acceptCookies = document.getElementById('acceptCookies');
@@ -647,8 +655,6 @@
                 function calculateLoan() {
                     // ... existing loan calculator code ...
                 }
-
-                // ... other loan calculator functions ...
             }
 
             function initializePage() {
@@ -664,30 +670,7 @@
                         }
                     });
                 }
-
-                // Update datetime
-                function updateDateTime() {
-                    const now = new Date();
-                    const options = {
-                        weekday: 'long',
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric',
-                        hour: '2-digit',
-                        minute: '2-digit',
-                        second: '2-digit',
-                        hour12: true
-                    };
-                    const datetimeElement = document.getElementById('datetime');
-                    if (datetimeElement) {
-                        datetimeElement.textContent = now.toLocaleDateString('en-US', options);
-                    }
-                }
-
-                updateDateTime();
-                setInterval(updateDateTime, 60000);
             }
         </script>
 </body>
-
 </html>
